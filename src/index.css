@@ -33,6 +33,7 @@
   }
   option {
     text-align: center;
+    display: inline-block;
   }
 
   input:-webkit-autofill,
