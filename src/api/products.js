@@ -1,5 +1,5 @@
 import { defer } from "react-router-dom";
-const API_URL = "api/products";
+const API_URL = "/api/products";
 
 export const getAllProducts = async ({ request }) => {
   const url = new URL(request.url);
@@ -23,8 +23,6 @@ export const getSingleProduct = async ({ params }) => {
     const response = await fetch(`${API_URL}/${params.productId}`);
 
     const data = await response.json();
-
-    // console.log(data);
 
     return data.data.product;
   };

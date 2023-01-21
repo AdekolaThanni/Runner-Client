@@ -1,5 +1,5 @@
 {
-  "proxy": "https://runner-server.onrender.com/",
+  "proxy": "https://runner-server.onrender.com",
   "name": "client",
   "version": "0.1.0",
   "private": true,
