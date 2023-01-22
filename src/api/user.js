@@ -1,6 +1,6 @@
 import { defer } from "react-router-dom";
 
-const API_URL = "/api/users";
+const API_URL = `/api/users`;
 
 export const getUser = async () => {
   const fetcher = async () => {

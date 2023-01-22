@@ -14,7 +14,7 @@ const useBag = () => {
   const getBag = async () => {
     try {
       setFetchState("loading");
-      const response = await fetch("/api/cart");
+      const response = await fetch(`/api/cart`);
 
       if (!response.ok) throw new Error("Could not get your bag");
 

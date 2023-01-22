@@ -36,7 +36,7 @@ function UserModal({ closeModal }) {
   const logout = async () => {
     try {
       setLoggingOut(true);
-      const response = await fetch("/api/users/logout");
+      const response = await fetch(`/api/users/logout`);
       if (!response.ok) throw new Error();
       else {
         setLoggingOut(false);

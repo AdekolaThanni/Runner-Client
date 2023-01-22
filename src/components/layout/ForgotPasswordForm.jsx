@@ -16,7 +16,7 @@ function ForgotPasswordForm({ hideForm }) {
 
   const sendMail = async (values) => {
     setSendingMail(true);
-    const response = await fetch("/api/users/forgotPassword", {
+    const response = await fetch(`/api/users/forgotPassword`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

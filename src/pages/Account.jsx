@@ -37,7 +37,7 @@ function Profile({ user }) {
         );
       }
       setUpdatingProfile(true);
-      const response = await fetch("/api/users", {
+      const response = await fetch(`/api/users`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -146,7 +146,7 @@ function Secuirity({ user }) {
         );
       }
       setUpdatingPassword(true);
-      const response = await fetch("/api/users/updatePassword", {
+      const response = await fetch(`/api/users/updatePassword`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

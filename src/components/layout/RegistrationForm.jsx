@@ -32,7 +32,7 @@ function RegistrationForm({ hideForm }) {
   const dispatch = useDispatch();
   const registerUser = async (values) => {
     setCreatingAccount(true);
-    const response = await fetch("/api/users/register", {
+    const response = await fetch(`/api/users/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

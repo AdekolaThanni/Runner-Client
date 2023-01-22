@@ -18,7 +18,7 @@ function Header() {
   const { deleteBag } = useBag();
   const getLoggedInState = async () => {
     try {
-      const response = await fetch("/api/users/login");
+      const response = await fetch(`/api/users/login`);
 
       if (!response.ok) throw new Error();
 

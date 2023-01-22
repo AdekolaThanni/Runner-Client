@@ -1,5 +1,5 @@
 import { defer } from "react-router-dom";
-const API_URL = "/api/products";
+const API_URL = `/api/products`;
 
 export const getAllProducts = async ({ request }) => {
   const url = new URL(request.url);

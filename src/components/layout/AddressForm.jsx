@@ -5,7 +5,6 @@ import { useDispatch } from "react-redux";
 import { popupActions } from "../../stores/appStore/popupReducer";
 import FormError from "../UI/FormError";
 import Spinner from "../UI/Spinner";
-import { useNavigate } from "react-router-dom";
 import useBag from "../../hooks/useBag";
 
 const Schema = Yup.object().shape({
@@ -26,14 +25,13 @@ const Schema = Yup.object().shape({
 });
 
 function AddressForm({ hideForm }) {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { bag } = useBag();
   const [proceeding, setProceeding] = useState(false);
   const checkout = async () => {
     try {
       setProceeding(true);
-      const response = await fetch("/api/checkout", {
+      const response = await fetch(`/api/checkout`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
